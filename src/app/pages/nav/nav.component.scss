@@ -241,10 +241,12 @@ header .textos-header {
         position: relative;
         width: 35vw;
 
-        p {
+        a {
+            text-decoration: none;
             font-weight: bold;
             margin-top: 5%;
             font-size: 1.1em;
+            color: #003E5C;
         }
 
     }
