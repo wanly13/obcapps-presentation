@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navMobile {
+    display: none;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100% !important;
+    height: 97vh;
+    /* background: linear-gradient(to right, rgb(169, 159, 255) , hsla(240, 67%, 54%, 0.664)),
+                                url(../../../assets/img/portada.jpg); */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Coloca el video detrás de otros elementos si los tienes */
+}
+
+img {
+    margin-top: 2%;
+    color: white !important;
+    width: 120px;
+    height: 120px;
+}
+
+.navv {
+    margin-left: 15vh;
+    margin-right: 15vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        background-color: #00AEDA;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+nav>a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav>a:hover {
+
+    font-weight: bold;
+}
+
+
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1 {
+    font-size: 50px;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.textos-header h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    height: 5em;
+    border-bottom: 2px solid rgb(230, 230, 230);
+    border-radius: 0 0 50% 50%;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    color: #fff;
+    
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+
+    .content {
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+
+        p {
+            margin: 0 0 20px;
+            color: #FFF;
+        }
+
+        #more-arrows {
+            width: 75px;
+            height: 65px;
+
+            &:hover {
+
+                polygon {
+                    fill: #FFF;
+                    transition: all .2s ease-out;
+
+                    &.arrow-bottom {
+                        transform: translateY(-18px);
+                    }
+
+                    &.arrow-top {
+                        transform: translateY(18px);
+                    }
+
+                }
+
+            }
+
+            polygon {
+                fill: #FFF;
+                transition: all .2s ease-out;
+
+                &.arrow-middle {
+                    opacity: 0.75;
+                }
+
+                &.arrow-top {
+                    opacity: 0.5
+                }
+
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    header {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: 120vh;
+        /*   background: linear-gradient(to right, rgb(47, 30, 196) , hsla(240, 67%, 54%, 0.664)),
+                                    url(../../../assets/img/portada.jpg); */
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+
+
+
+    .container {
+        text-align: center;
+
+        .content {
+            position: absolute;
+            left: 50%;
+            top: 75%;
+
+        }
+    }
+
+}
+
+
+
+@media screen and (max-height:510px) {
+    .container {
+        text-align: center;
+
+        .content {
+            #more-arrows {
+                display: none;
+
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .navMobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        .opcionNav {
+
+            margin-left: 4vw;
+            background-color: #f2f2f2;
+
+
+
+        }
+    }
+
+    .nube-mensaje {
+        margin-top: 3vh;
+        margin-left: 2vw;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #F5F5F5;
+        border-radius: 20px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        position: relative;
+        width: 35vw;
+
+        p {
+            font-weight: bold;
+            margin-top: 5%;
+            font-size: 1.1em;
+        }
+
+    }
+
+    .nube-mensaje:before {
+
+        border-bottom: 16px solid #F5F5F5;
+        border-right: 16px solid transparent;
+        content: "";
+        height: 0;
+        position: absolute;
+        top: -16px;
+        left: 20px;
+        width: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    img {
+        margin-top: 5%;
+
+    }
+
+    .navv {
+        justify-content: center;
+    }
+
+    nav {
+        display: none;
+
+    }
+
+    nav>a {
+        margin-right: 5px;
+
+    }
+
+    a {
+
+        flex-direction: column;
+    }
+
+    .textos-header h1 {
+        font-size: 35px;
+    }
+
+    .textos-header h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    img {
+        margin-top: 10%;
+
+    }
+}
+
+
+@media screen and (max-width:340px) {
+
+    nav {
+        flex-direction: column
+    }
+
+    .textos-header h1 {
+        font-size: 20px;
+    }
+
+    .textos-header h2 {
+        font-size: 15px;
+    }
+}
